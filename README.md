@@ -70,6 +70,7 @@ A detailed explanation of the implemented method, along with theoretical foundat
 📌 `/doc/presentation.pdf`
 
 This document includes:
+
 ✔️ Mathematical definition of SVD decomposition.
 
 ✔️ Explanation of the compression method through singular value truncation.
