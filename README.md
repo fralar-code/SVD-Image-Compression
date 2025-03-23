@@ -8,10 +8,8 @@ The implementation consists of several key steps, all developed in MATLAB:
 The first step in computing the eigenvalues of a matrix is reducing it to Hessenberg form. This is achieved using Householder transformations, which eliminate the elements below the first subdiagonal.
 
 📌 Code: hessemberg.m
-
-    Takes a matrix AA as input and transforms it into a Hessenberg matrix.
-
-    Uses Householder transformations to remove unnecessary coefficients.
+- Takes a matrix AA as input and transforms it into a Hessenberg matrix.
+- Uses Householder transformations to remove unnecessary coefficients.
 
 2️⃣ Eigenvalue Computation via QR Factorization
 
