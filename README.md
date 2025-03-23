@@ -16,7 +16,7 @@ This is achieved using Householder transformations, which eliminate the elements
 
 📌 **Code:** `hessemberg.m`
 
-- Takes a matrix \( A \) as input and transforms it into a **Hessenberg matrix**.
+- Takes a matrix \(A\) as input and transforms it into a **Hessenberg matrix**.
 - Uses **Householder transformations** to remove unnecessary coefficients.
 
 ---
@@ -30,7 +30,7 @@ gradually converging to a diagonal matrix containing the eigenvalues on the main
 
 - Implements **QR decomposition** using **Givens rotations**.
 - Accelerates convergence with **Wilkinson shift**.
-- Tracks applied transformations, storing them in matrix \( Q \).
+- Tracks applied transformations, storing them in matrix \(Q\).
 
 📌 **Code:** `givensRotations.m`
 
@@ -47,7 +47,7 @@ $A = U \Sigma V^T$
 📌 **Code:** `my_svd.m`
 
 - Computes the **SVD** using the previously computed results.
-- Extracts matrices \( U, \Sigma, V \) from the eigenvalues and eigenvectors of \( A A^T \).
+- Extracts matrices $U, \Sigma, V$ from the eigenvalues and eigenvectors of $A A^T$.
 
 ---
 
@@ -59,6 +59,6 @@ By reducing the number of retained singular values, efficient compression is ach
 📌 **Code:** `image_compression.m`
 
 - Performs **SVD** on each image channel (R, G, B).
-- **Reconstructs the image** using only the first \( k \) singular values.
+- **Reconstructs the image** using only the first \(k\) singular values.
 - **Computes the compression ratio**, highlighting memory savings.
-- Displays reconstructed images at different \( k \) values.
+- Displays reconstructed images at different \(k\) values.
