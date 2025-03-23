@@ -3,7 +3,7 @@
 This repository contains an implementation of image compression using Singular Value Decomposition (SVD). The algorithm is developed in MATLAB and includes advanced matrix manipulation techniques, such as QR factorization, Givens rotations, Wilkinson shift, and Hessenberg reduction.
 ## Implementation
 The implementation consists of several key steps, all developed in MATLAB:
-# 1️⃣ Hessenberg Matrix Reduction
+### 1️⃣ Hessenberg Matrix Reduction
 
 The first step in computing the eigenvalues of a matrix is reducing it to Hessenberg form. This is achieved using Householder transformations, which eliminate the elements below the first subdiagonal.
 
