@@ -66,6 +66,7 @@ By reducing the number of retained singular values, efficient compression is ach
 ## 📄 Documentation
 
 A detailed explanation of the implemented method, along with theoretical foundations, is provided in:
+
 📌 `/doc/presentation.pdf`
 
 This document includes:
