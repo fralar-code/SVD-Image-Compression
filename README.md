@@ -42,9 +42,7 @@ gradually converging to a diagonal matrix containing the eigenvalues on the main
 
 Once the eigenvalues are obtained, **SVD decomposition** is performed, factorizing the matrix into three components:
 
-\[
-A = U \Sigma V^T
-\]
+$A = U \Sigma V^T$
 
 📌 **Code:** `my_svd.m`
 
