@@ -1,66 +1,66 @@
-# SVD Image Compression
+SVD Image Compression
+=====================
 
-This repository contains an implementation of image compression using Singular Value Decomposition (SVD). The algorithm is developed in MATLAB and includes advanced matrix manipulation techniques, such as QR factorization, Givens rotations, Wilkinson shift, and Hessenberg reduction.
+This repository contains an implementation of **image compression using Singular Value Decomposition (SVD)**.  
+The algorithm is developed in **MATLAB** and includes advanced matrix manipulation techniques, such as  
+**QR factorization, Givens rotations, Wilkinson shift, and Hessenberg reduction**.
+
 ## Implementation
-The implementation consists of several key steps, all developed in MATLAB:
-### 1️⃣ Hessenberg Matrix Reduction
 
-The first step in computing the eigenvalues of a matrix is reducing it to Hessenberg form. This is achieved using Householder transformations, which eliminate the elements below the first subdiagonal.
+The implementation consists of several key steps, all developed in **MATLAB**:
 
-📌 Code: ```hessemberg.m```
-- Takes a matrix $A$ as input and transforms it into a Hessenberg matrix.
-- Uses Householder transformations to remove unnecessary coefficients.
+### 1️⃣ **Hessenberg Matrix Reduction**
 
-2️⃣ Eigenvalue Computation via QR Factorization
+The first step in computing the eigenvalues of a matrix is reducing it to **Hessenberg form**.  
+This is achieved using Householder transformations, which eliminate the elements below the first subdiagonal.
 
-To determine the eigenvalues of the matrix, iterative QR factorization is applied, gradually converging to a diagonal matrix containing the eigenvalues on the main diagonal.
+📌 **Code:** `hessemberg.m`
 
-📌 Code: qrfatt.m
+- Takes a matrix \( A \) as input and transforms it into a **Hessenberg matrix**.
+- Uses **Householder transformations** to remove unnecessary coefficients.
 
-    Implements QR decomposition using Givens rotations.
+---
 
-    Accelerates convergence with Wilkinson shift.
+### 2️⃣ **Eigenvalue Computation via QR Factorization**
 
-    Tracks applied transformations, storing them in matrix QQ.
+To determine the **eigenvalues** of the matrix, **iterative QR factorization** is applied,  
+gradually converging to a diagonal matrix containing the eigenvalues on the main diagonal.
 
-📌 Code: givensRotations.m
+📌 **Code:** `qrfatt.m`
 
-    Computes the Givens rotations required to eliminate elements below the main diagonal.
+- Implements **QR decomposition** using **Givens rotations**.
+- Accelerates convergence with **Wilkinson shift**.
+- Tracks applied transformations, storing them in matrix \( Q \).
 
-3️⃣ Singular Value Decomposition (SVD)
+📌 **Code:** `givensRotations.m`
 
-Once the eigenvalues are obtained, SVD decomposition is performed, factorizing the matrix into three components:
-A=UΣVT
-A=UΣVT
+- Computes the **Givens rotations** required to eliminate elements below the main diagonal.
 
-📌 Code: my_svd.m
+---
 
-    Computes the SVD using the previously computed results.
+### 3️⃣ **Singular Value Decomposition (SVD)**
 
-    Extracts matrices U,Σ,VU,Σ,V from the eigenvalues and eigenvectors of AATAAT.
+Once the eigenvalues are obtained, **SVD decomposition** is performed, factorizing the matrix into three components:
 
-4️⃣ Image Compression using SVD
+\[
+A = U \Sigma V^T
+\]
 
-The compression algorithm is applied separately to the three channels (R, G, B) of an RGB image. By reducing the number of retained singular values, efficient compression is achieved with minimal quality loss.
+📌 **Code:** `my_svd.m`
 
-📌 Code: image_compression.m
+- Computes the **SVD** using the previously computed results.
+- Extracts matrices \( U, \Sigma, V \) from the eigenvalues and eigenvectors of \( A A^T \).
 
-    Performs SVD on each image channel (R, G, B).
+---
 
-    Reconstructs the image using only the first kk singular values.
+### 4️⃣ **Image Compression using SVD**
 
-    Computes the compression ratio, highlighting memory savings.
+The compression algorithm is applied separately to the **three channels (R, G, B)** of an **RGB** image.  
+By reducing the number of retained singular values, efficient compression is achieved with **minimal quality loss**.
 
-    Displays reconstructed images at different kk values.
+📌 **Code:** `image_compression.m`
 
-📄 Documentation
-
-A detailed explanation of the implemented method, along with theoretical foundations, is provided in:
-
-📌 /doc/presentation.pdf
-
-This document includes:
-✔️ Mathematical definition of SVD decomposition.
-✔️ Explanation of the compression method through singular value truncation.
-✔️ Details on the QR algorithm and Givens rotations.
-✔️ Analysis of the trade-off between reconstruction quality and storage efficiency.
+- Performs **SVD** on each image channel (R, G, B).
+- **Reconstructs the image** using only the first \( k \) singular values.
+- **Computes the compression ratio**, highlighting memory savings.
+- Displays reconstructed images at different \( k \) values.
