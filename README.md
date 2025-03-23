@@ -1,4 +1,4 @@
-SVD Image Compression
+#SVD Image Compression
 
 This repository contains an implementation of image compression using Singular Value Decomposition (SVD). The algorithm is developed in MATLAB and includes advanced matrix manipulation techniques, such as QR factorization, Givens rotations, Wilkinson shift, and Hessenberg reduction.
 Implementation
